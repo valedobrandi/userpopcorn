@@ -60,10 +60,10 @@ useEffect(() => {
         <button className="btn-back" onClick={() => setGetId(null)}>
           X
         </button>
-       
         {Poster !== 'N/A' && !imgErro.includes(imdbID)
             ? <img src={Poster}
               alt={`${Title} poster`}
+              className=""
             />
             : <MdOutlinePhoto style={{ fontSize: '120px' }} />}
         <div className="details-overview">
@@ -82,7 +82,7 @@ useEffect(() => {
           size={25}
           onSetRating={setUserRating}
         />)
-        : <p>Alread Rated! {star} <span>⭐️</span>  </p> }
+        : <p>Already Rated! {star} <span>⭐️</span>  </p> }
         {userRating > 0 && star === 0 && (
           <button
             className="btn-add"

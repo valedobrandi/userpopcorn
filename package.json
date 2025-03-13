@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "surge --project ./dist --domain react-usepopcorn.surge.sh",
+    "sync": "rsync -azP --delete ./dist/ root@78.46.138.232:/server/nginx/html/userpopcorn/" 
   },
   "dependencies": {
     "react": "^18.2.0",
